@@ -9,3 +9,5 @@ function calculateAvg(numbers) {
 console.log(calculateAvg([10, 20, 30]));
 
 
+
+
