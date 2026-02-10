@@ -1,11 +1,13 @@
-function calculateAvg(numbers) {
-    let sum = 0;
-    for (let i=0; i <= numbers.length; i++) {
-        sum += numbers[i];
-    }
-    return sum / numbers.length;
+import "./styles.css";
+import "./Razvan-George-Catrinari.js";
+import {add, subtract} from "./math.js"
+
+try {
+    const x = 10;
+    const y = 5;
+
+    console.log(`${x} + ${y} = ${add(x, y)}`);
+    console.log(`${x} - ${y} = ${subtract(x, y)}`);
+} catch (error) {
+    console.error('Error:', error.message);
 }
-
-console.log(calculateAvg([10, 20, 30]));
-
-
