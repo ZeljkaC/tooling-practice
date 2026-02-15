@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 7: DOM Selection</title>
+    <style>
+        .highlight {
+            color: blue;
+            font-weight: bold;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="myParagraph">First paragraph</p>
+    <button id="myButton">Click Me</button>
+
+    <script>
+        const button = document.getElementById("myButton");
+        const paragraph = document.getElementById("myParagraph");
+
+        const paragraphs = [
+        "First paragraph",
+        "Second paragraph"
+        ];
+        let parIndex = 0;
+
+        button.addEventListener("click", () => {
+            // change par text
+            parIndex = (parIndex + 1) % 2;
+            paragraph.textContent = paragraphs[parIndex];
+
+            // Toggle css class highlight
+            paragraph.classList.toggle("highlight");
+        });
+    </script>
+
+</body>
+</html>
